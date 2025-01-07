@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Prediksi</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h1 id="title">Klasifikasi Model</h1>
+    
+    {% if filename and prediction %}
+        <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image" width="300" height="300" style="max-width: 100%; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+        <div id="Result">
+            <p>Hasil Prediksi: {{ prediction }}</p>
+            <p>Lama Waktu Prediksi: {{ prediction_time }} detik</p>
+            <p>Persentase Akurasi : {{confidence|round(2) }}%</p>
+        </div>
+    {% else %}
+        <p>Tidak ada gambar atau prediksi yang tersedia.</p>
+    {% endif %}
+    <button onclick="location.href='{{ url_for('upload_file') }}'">Kembali</button>
+</body>
+</html>

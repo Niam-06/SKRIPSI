@@ -1,0 +1,76 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url("{{ url_for('static', filename='source/background_2.jpg') }}") no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    
+}
+
+#title {
+    background-color: rgba(76, 175, 80);
+    color: #fff;
+    padding: 1rem;
+    margin: 0;
+    border-bottom: 2px solid black;
+    font-size: 24px;
+}
+
+form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="file"], select {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid #4caf50;
+    border-radius: 8px;
+}
+
+button {
+    padding: 1rem;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#Result {
+    background-color: white;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+p {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.upload-section {
+    margin-top: 1rem; 
+}
+
+.form-section {
+    margin-top: 2rem; 
+}
